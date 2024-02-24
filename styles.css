@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* || RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font: inherit;
+}
+
+/* || VARIABLES */
+
+:root {
+  /* FONTS */
+  --FF: "Lexend Deca", sans-serif;
+  --FF-HEADINGS: "Big Shoulders Display", sans-serif;
+  --FS: 14px;
+
+  /* COLORS */
+  --BGCOLOR-SED: hsl(31, 77%, 52%);
+  --BGCOLOR-SUV: hsl(184, 100%, 22%);
+  --BGCOLOR-LUX: hsl(179, 100%, 13%);
+  --FONT-COLOR: hsla(0, 0%, 100%, 0.75);
+  --BUTTON-COLOR: hsl(0, 0%, 95%);
+  --BGCOLOR: hsl(0, 0%, 95%);
+  --HEADER-COLOR: hsl(0, 0%, 95%);
+  --ATTRIBUTION-LINK-COLOR: hsl(228, 45%, 44%);
+
+  /* PADDING */
+  --PADDING-S-CARD-H1: 35px;
+  --PADDING-L-CARD: 45px;
+  --PADDING-P: 25px 0;
+
+  /* BORDER */
+  --BUTTON-BORDER: 2.5px solid var(--BUTTON-COLOR);
+}
+
+/* || GENERAL STYLES */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 900px) {
+    height: 100vh;
+  }
+}
+
+.main {
+  width: 290px;
+  margin: 20px auto;
+
+  @media screen and (min-width: 900px) {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card {
+  padding: var(--PADDING-S-CARD-H1);
+  font-family: var(--FF);
+  font-size: var(--FS);
+
+  @media screen and (min-width: 900px) {
+    width: 300px;
+    padding: var(--PADDING-L-CARD);
+    height: 494px;
+    position: relative;
+    font-size: 15px;
+  }
+}
+
+.card__h1 {
+  font-family: var(--FF-HEADINGS);
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--HEADER-COLOR);
+  padding-top: var(--PADDING-S-CARD-H1);
+
+  @media screen and (min-width: 900px) {
+    padding-top: var(--PADDING-S-CARD-H1);
+    font-size: 2.4rem;
+  }
+}
+
+.card__p {
+  line-height: 2;
+  color: var(--FONT-COLOR);
+  padding: var(--PADDING-P);
+
+  @media screen and (min-width: 900px) {
+    line-height: 1.7;
+  }
+}
+
+.button {
+  background-color: var(--BUTTON-COLOR);
+  border: none;
+  border-radius: 25px;
+  width: 120px;
+  height: 40px;
+
+  @media screen and (min-width: 900px) {
+    position: absolute;
+    bottom: 50px;
+    width: 140px;
+    height: 47px;
+  }
+}
+
+.button:hover {
+  color: var(--BUTTON-COLOR);
+  border: var(--BUTTON-BORDER);
+  cursor: pointer;
+}
+
+/* || SPECIFIC STYLES */
+.card__sed {
+  background-color: var(--BGCOLOR-SED);
+  border-radius: 8px 8px 0 0;
+
+  @media screen and (min-width: 900px) {
+    border-radius: 8px 0 0 8px;
+  }
+}
+
+.card__suv {
+  background-color: var(--BGCOLOR-SUV);
+}
+
+.card__lux {
+  background-color: var(--BGCOLOR-LUX);
+  border-radius: 0 0 8px 8px;
+
+  @media screen and (min-width: 900px) {
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.button__sed {
+  color: var(--BGCOLOR-SED);
+}
+
+.button__sed:hover {
+  background-color: var(--BGCOLOR-SED);
+}
+
+.button__suv {
+  color: var(--BGCOLOR-SUV);
+}
+
+.button__suv:hover {
+  background-color: var(--BGCOLOR-SUV);
+}
+
+.button__lux {
+  color: var(--BGCOLOR-LUX);
+}
+
+.button__lux:hover {
+  background-color: var(--BGCOLOR-LUX);
+}
+
+.attribution {
+  font-family: var(--FF);
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 900px) {
+    margin-bottom: 0;
+  }
+}
+
+.attribution a {
+  color: var(--ATTRIBUTION-LINK-COLOR);
+}
